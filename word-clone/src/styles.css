@@ -218,10 +218,40 @@ h1 {
 .modal-title {
   margin-bottom: 0.5em;
 }
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.keyboard .row {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+.keyboard .letter {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 4px;
+  display: grid;
+  place-content: center;
+  background: var(--color-gray-900);
+  font-size: 1rem;
+  font-weight: 600;
+}
 
-/*
-  Keyframe animations
-*/
+.keyboard .correct {
+  background: var(--color-success);
+  color: white;
+}
+.keyboard .incorrect {
+  background: var(--color-gray-300);
+  color: white;
+}
+.keyboard .misplaced {
+  background: var(--color-warning);
+  color: white;
+}
+
 @keyframes slideUp {
   from {
     transform: translateY(100%);
